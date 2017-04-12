@@ -25,7 +25,7 @@
 	String type=Common.toChineseAndTrim(request.getParameter("type")); 
 	String pcpx=request.getParameter("pcpx"); 
 	String sel_cx=Common.toChineseAndTrim(request.getParameter("sel_cx"));
-	String sel_dx=Common.toChineseAndTrim(request.getParameter("sel_dx"));
+	String sel_dw=Common.toChineseAndTrim(request.getParameter("sel_dw"));
 	System.out.println("px==="+pcpx);
 	//System.out.println("\nbookCase*********************action="+type);
 	 if(type.trim().equals("汽车品牌")){
@@ -40,8 +40,8 @@
 		if(!"".equals(sel_cx)&&sel_cx!=null){
 			sql+=" and qclx= '"+sel_cx+"'";
 		}
-		if(!"".equals(sel_dx)&&sel_dx!=null){
-			sql+=" and qcdx= '"+sel_dx+"'";
+		if(!"".equals(sel_dw)&&sel_dw!=null){
+			sql+=" and qcdw= '"+sel_dw+"'";
 		}
 		if(!"".equals(pcpx)&&pcpx!=null){
 			sql+=" order by "+pcpx;
@@ -82,7 +82,7 @@ function sel_dw(dw){
  <form action="<%=basePath %>searchinfo.jsp" method="post" name="form1" >
 <input type="hidden" id="pcpx" name="pcpx" value="<%=pcpx%>">
 <input type="hidden" name="sel_cx" value="<%=sel_cx%>">
-<input type="hidden" name="sel_dx" value="<%=sel_dx%>">
+<input type="hidden" name="sel_dw" value="<%=sel_dw%>">
 <input type="hidden" name="type" value="complexquery">
 </form>
 <TABLE class=MainTable cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
@@ -111,9 +111,9 @@ function sel_dw(dw){
             <SPAN><P>档位</P></SPAN>
 		  </TD>
 		</TR> 
-		<TR><TD><input type="radio" name="cx" id="radio1" value="" onClick="sel_dw('')" <%if("".equals(sel_cx)) out.print("checked");%>/><span for="radio1">不限</span></TD></TR>
-		<tr><td><input type="radio" name="cx" id="radio2" value="手动档" onClick="sel_dw('手动档')" <%if("手动档".equals(sel_cx)) out.print("checked");%>/><span for="radio2">手动档</span></td></tr>
-		<tr><td><input type="radio" name="cx" id="radio2" value="自动档" onClick="sel_dw('自动档')" <%if("自动档".equals(sel_cx)) out.print("checked");%>/><span for="radio2">自动档</span></td></tr>
+		<TR><TD><input type="radio" name="dw" id="radio1" value="" onClick="sel_dw('')" <%if("".equals(sel_dw)) out.print("checked");%>/><span for="radio1">不限</span></TD></TR>
+		<tr><td><input type="radio" name="dw" id="radio2" value="手动档" onClick="sel_dw('手动')" <%if("手动".equals(sel_dw)) out.print("checked");%>/><span for="radio2">手动档</span></td></tr>
+		<tr><td><input type="radio" name="dw" id="radio2" value="自动档" onClick="sel_dw('自动')" <%if("自动".equals(sel_dw)) out.print("checked");%>/><span for="radio2">自动档</span></td></tr>
 
 	</TBODY>
 	</TABLE>

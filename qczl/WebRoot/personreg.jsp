@@ -1,5 +1,9 @@
 <%@ page language="java" import="java.util.*"  contentType="text/html;charset=gb2312" %>
 <%@ include file="iframe/head.jsp" %>
+<style> 
+table 
+  {   border-collapse:   separate;   border-spacing:   10px;   } 
+</style> 
 <SCRIPT language=JavaScript src="<%=basePath %>member/images/city.js"></SCRIPT>
 <%
 String message = (String)request.getAttribute("message");
