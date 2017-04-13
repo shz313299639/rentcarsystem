@@ -146,7 +146,7 @@ public class ComServlet extends HttpServlet {
 			int flag = cBean.comUp("insert into zc(qcid,qcsj,qcdd,hcsj,hcdd,member,zt,xzzt,sfhc) " +
 					"values('"+id+"','"+qcsj+"','"+qcdd+"','"+hcsj+"','"+hcdd+"','"+member+"','未审核','未审核','否')");//插入数据库操作
 			if(flag == Constant.SUCCESS){ 
-				request.setAttribute("message", "操作成功，请登录会员中心查看详细信息！");//插入成功
+				request.setAttribute("message", "预定成功，请前往指定地址交费取车！详细信息请登录会员中心查看！");//插入成功
 				request.getRequestDispatcher("nhzp.jsp").forward(request, response); 
 			}
 			else { 

@@ -96,7 +96,8 @@ document.write('<div class="wrap">');
 		  <TD align=left><br>
 		  车辆分类：<%=allnew.get(2).toString()%>  &nbsp;&nbsp;&nbsp;车辆名称：<%=allnew.get(1).toString()%> &nbsp;&nbsp;&nbsp; 联系电话：<%=allnew.get(4).toString()%>  &nbsp;&nbsp;&nbsp;<br><br>
 		
-		 价格：<%=allnew.get(5).toString()%> &nbsp;&nbsp;&nbsp;超时价格：<%=allnew.get(6).toString()%>  &nbsp;&nbsp;&nbsp;点击率：<%=allnew.get(8).toString()%>&nbsp;&nbsp;&nbsp;备注：<%=allnew.get(7).toString()%>  &nbsp;&nbsp;&nbsp; <br>
+		 价格：<%=allnew.get(5).toString()%>元/天 &nbsp;&nbsp;&nbsp;超时价格：<%=allnew.get(6).toString()%>元/小时  &nbsp;&nbsp;&nbsp;点击率：<%=allnew.get(8).toString()%>&nbsp;&nbsp;&nbsp;<br><br>
+		 备注：<%=allnew.get(7).toString()%>  &nbsp;&nbsp;&nbsp; <br>
 		   <br>
   		   		 <%  List allnew1=cb.get1Com("select count(*) from zc where qcid='"+id+"' and sfhc='否'",1);
   		   		// String sql="select * from zc where qcid='"+id+"' and sfhc='否'";
