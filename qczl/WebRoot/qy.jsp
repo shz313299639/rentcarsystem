@@ -77,7 +77,7 @@ document.write('<div class="wrap">');
 		<TBODY>
         <TR>
           <TD class=head colspan="2">
-			<SPAN class=TAG>相关专业人员简介</SPAN> 
+			<SPAN class=TAG>合作伙伴</SPAN> 
 			
 		  </TD>
 		</TR>
