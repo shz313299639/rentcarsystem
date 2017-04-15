@@ -81,13 +81,18 @@ document.write('<div class="wrap">');
 	<!--****************主菜单开始****************-->
 	
 	<A href="index.jsp" target="">首    页</A> |
+	<A href="member/index.jsp" target="">登录</A>、
+	<A href="reg.jsp" target="">注册</A> |
 	<A href="qy.jsp" target="">相关专业人员简介</A> |
 	<A href="news.jsp" target="">新闻信息</A> |
 	
 	<A href="searchinfo.jsp" target="">车辆信息</A> |
 	<A href="guestbook.jsp" target="">留言板</A> |
+	<!-- 
 	<A href="member/index.jsp" target="">会员中心</A> | 
 	<A href="admin/login.jsp" target="">管理登陆</A> 
+	-->
+	<A href="about.jsp" target="">关于我们</A> 
 	<!--****************主菜单结束****************-->
 	</TD>
   </TR>

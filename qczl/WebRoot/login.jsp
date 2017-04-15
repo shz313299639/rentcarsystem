@@ -25,6 +25,9 @@ function checklogin() {
 	}
 }
 </SCRIPT>
+<style>
+table{align:center;}
+</style>
 <%
 String message = (String)request.getAttribute("message");
 	if(message == null){
@@ -52,7 +55,7 @@ String message = (String)request.getAttribute("message");
           <TABLE cellSpacing=0 cellPadding=2 width="100%" bgColor=#ffffff border=0><TBODY>
             <TR>
               <TD style="LINE-HEIGHT: 200%" vAlign=center>
-                <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+                <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0 >
                   <TBODY>
                     <TR>
                       <TD align=middle bgColor=#ebebeb>
@@ -80,12 +83,12 @@ String message = (String)request.getAttribute("message");
                                                           <TBODY>
                                                             <TR>
                                                               <TD vAlign=top align=middle bgColor=#ffffff height=257>
-                                                                <TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
+                                                                <TABLE cellSpacing=0 cellPadding=0 width="98%" border=0 align="center">
                                                                   <TBODY>
                                                                     <TR>
                                                                       <TD height=230>
                            <FORM id=form1 name=form1 action=<%=basePath %>Login.do?method=PAGEUSERLOGIN method=post >
-                                                                          <TABLE id=Table7 width=400 border=0>
+                                                                          <TABLE id=Table7 width=100% border=0>
                                                                             <TBODY>
                                                                               <TR height=40>
                                                                                 <TD vAlign=center align=middle colSpan=3>
@@ -97,36 +100,37 @@ String message = (String)request.getAttribute("message");
                                                                                   </TD></TR>
                                                                               <TR height=60>
                                                                                  
-                                  <TD noWrap align=middle width=171>
+                                  <TD noWrap align=middle width=100%>
                                     <TABLE width="100%" border=0>
                                       <TBODY>
                                     <TR>
-                                  <TD width="35%" height=24>用户名：</TD>
-                                  <TD>
+                                  <TD width="45%" height=24 align="right">用户名：</TD>
+                                  <TD align="left">
 								  <INPUT class=input_new id=username style="WIDTH: 110px" size=15 maxLength=10 name=username onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')"  value=<%=request.getAttribute("reg_user")==null?"":request.getAttribute("reg_user") %>>
 								  </TD>
 								  </TR>
                                   <TR>
-                                  <TD height=25>密　码：<input type=hidden name=reg_type value=person></TD>
-                                  <TD height=25>
+                                  <TD height=25 align="right">密　码：<input type=hidden name=reg_type value=person></TD>
+                                  <TD height=25 align="left">
 								  <INPUT class=input_new id=password style="WIDTH: 110px" type=password size=15  maxLength=16 name=password onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" 
                               onkeyup="value=value.replace(/[\W]/g,'')">
+                               <input type=button value="登陆" onClick="checklogin()">
 								  </TD>
 								  </TR>
 								  <TR>
-                                  <TD height=25>验证码：</TD>
-                                  <TD height=25><input type="hidden" name="yzm" value="<%=yzm %>" >
+                                  <TD height=25 align="right">验证码：</TD>
+                                  <TD height=25 align="left"><input type="hidden" name="yzm" value="<%=yzm %>" >
 								  <INPUT class=input_new id=checkcode size=5 maxlength="4" name=checkcode onKeyUp="this.value=this.value.replace(/\D/gi,'')"> <%=yzm %>
 								  </TD>
 								  </TR>
+								  <tr>
+								  <TD width="100%" colspan="2" Align=center>
+									<A href="<%=basePath %>/admin/login.jsp">我是管理员</A>  <A href="lost.jsp">找回密码</A> <A href="<%=basePath %>reg.jsp">用户注册</A>
+								  </TD>
+								  </tr>
 								  </TBODY>
 								  </TABLE>
-								  </TD>
-                                  <TD width=81>
-								  <LABEL><br>
-								  <input type=button value="登陆" onClick="checklogin()"> 
-								  </LABEL>
 								  </TD>
 								  </TR>
 								  <TR>
@@ -135,9 +139,7 @@ String message = (String)request.getAttribute("message");
                                   <TD class=red1 vAlign=center>
 								  <A class=dhx12 href=""></A>
 								  </TD>
-                                  <TD vAlign=center>
-									<A href="lost.jsp">找回密码</A> <A href="<%=basePath %>reg.jsp">用户注册</A>
-								</TD>
+                                  
 								</TR>
 							  <TR>
 								<TD vAlign=center colSpan=3 height=22>

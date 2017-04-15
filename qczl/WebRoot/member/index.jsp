@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
 <HTML>
-<HEAD>
+<HEAD> 
 <TITLE>会员管理中心---<%=str %></TITLE>
 <META http-equiv=Content-Type content="text/html; charset=gb2312">
 <META content="MSHTML 6.00.2900.3243" name=GENERATOR></HEAD>

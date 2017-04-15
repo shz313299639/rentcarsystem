@@ -63,7 +63,7 @@ function count_zj(){
 
 		//alert(Number(price)*Number(days));
 		var totale=Number(price)*Number(days);
-		
+		document.all.price.value=totale;
 		if(totale<0){
 			alert("还车时间不能早于取车时间");
 		}else{
@@ -156,6 +156,10 @@ int num=cb.getCount("select jf from member where username='"+member+"'");
 		</TR-->
 		<TR>
           <TD  align=right>总价：</TD>
+          <TD align=left><input type=text name=price size=30  readOnly></TD>
+		</TR>
+		<TR>
+          <TD  align=right>折后价：</TD>
           <TD align=left><input type=text name=zczj size=30  readOnly></TD>
 		</TR>
 		<tr>
