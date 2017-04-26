@@ -189,7 +189,8 @@ public class MemberAction extends HttpServlet {
 					List siteList = new SystemBean().getSiteInfo();
 					String sitename = siteList.get(0).toString();
 					request.setAttribute("message", "注册成功！恭喜您成为"+sitename+"的注册会员！");
-					request.getRequestDispatcher("login.jsp").forward(request, response);
+					//request.getRequestDispatcher("login.jsp").forward(request, response);
+					response.sendRedirect("login.jsp");
 				
 			}
 			else{

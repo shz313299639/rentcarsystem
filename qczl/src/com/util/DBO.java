@@ -32,7 +32,7 @@ public class DBO {
 		try 
 		{
 			Class.forName("com.mysql.jdbc.Driver"); 
-			conn=DriverManager.getConnection("jdbc:mysql://localhost/qczl","root","root");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost/qczl","root","123456");
 			//Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");           
 			//conn = DriverManager.getConnection("jdbc:microsoft:sqlserver://localhost:1433;databasename=qczl","sa","123");
 			stmt=conn.createStatement();
